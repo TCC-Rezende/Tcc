@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+h1
+{
+    font-family: 'Alegreya', serif;
+    text-align: center;
+    font-size: 6em;
+}
+
+.texto
+{
+    font-size: 1.7rem;
+}
+
+
+
+.texto.um 
+{
+    font-family: 'Montserrat', arial, sans-serif;
+}
+.texto.dois
+{
+    font-family: 'Poppins', sans-serif;
+}
+.texto.tres
+{
+    font-family: 'Fredoka', sans-serif;
+}
+.texto.quatro
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.texto.cinco
+{
+    font-family: 'League Spartan', sans-serif;
+}
+.texto.seis
+{
+    font-family: 'Raleway', sans-serif;  
+}
+.texto.sete
+{
+    font-family: 'Quicksand', sans-serif;  
+}
+.texto.oito
+{
+    font-family: 'Arvo', serif;
+}
+.texto.nove
+{
+    font-family: 'PT Sans', sans-serif;
+}
+.texto.dez
+{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.texto.onze
+{
+    font-family: 'Archivo', sans-serif;
+}
