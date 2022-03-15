@@ -1,0 +1,19 @@
+
+body{
+    min-height: 100vh;
+}
+
+ .container{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1.5rem; 
+}
+
+.oi {
+    font-style: italic;
+}
+.header a img
+{
+    height: 100px;
+}
+
