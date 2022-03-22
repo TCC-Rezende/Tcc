@@ -14,6 +14,7 @@
     <?php
     include_once "estilos/padrao.css";
     include_once "estilos/cabecalho.css";
+    include_once "estilos/rodape.css";
     include_once "estilos/styleInicio.css";
     ?>
     </style>
@@ -21,14 +22,21 @@
 
 <body>
     <!-- Cabeçalho da página  -->
-    <?php
-    include_once "elemantosPag/cabecalho.php";
-    ?>
+    <?php  include_once "elementosPag/cabecalho.php";   ?>
     <!-- Corpo da página  -->
     <div class="container">
     <div class="titulo">
     <h1>Bem-Vindo</h1>
     </div>
     </div>
+
+<?php include_once "elementosPag/rodape.html";      ?>
+
+
+<!-- Links para os icones & logos usados -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- ********************************* -->
+
 </body>
 </html>
