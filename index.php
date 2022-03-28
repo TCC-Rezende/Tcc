@@ -22,15 +22,16 @@
 
 <body>
     <!-- Cabeçalho da página  -->
-    <?php  include_once "elementosPag/cabecalho.php";   ?>
+<div class="container">
+    <?php  include_once "elementosPag/cabecalho.html";   ?>
     <!-- Corpo da página  -->
-    <div class="container">
     <div class="titulo">
     <h1>Bem-Vindo</h1>
     </div>
-    </div>
+    
 
 <?php include_once "elementosPag/rodape.html";      ?>
+</div>
 
 
 <!-- Links para os icones & logos usados -->
