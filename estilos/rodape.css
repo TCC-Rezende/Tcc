@@ -1,12 +1,11 @@
 footer
 {
     width: 100%;
-    min-height: 250px;
+    height: 250px;
     background: #444;
     display: flex;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    align-items: center;
+    justify-content: space-between;
 }
 footer .boxs
 {
@@ -53,9 +52,13 @@ footer .boxs:nth-child(4)
     align-items: center;
     background: #333;
     padding: 0 20px;
-    position: absolute;
-    bottom: -70px;
-    left: 0;
+
+}
+.rodape svg
+{
+    position: relative;  
+    width: 150px;
+    height: 50px;
 }
 .rodape h2
 {
@@ -71,22 +74,26 @@ footer .boxs:nth-child(4)
     height: 40px;
     text-align: center;
     line-height: 40px;
-    background: #ddd;
+    /* background: #ddd; */
     margin: 10px ;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background .3s linear;
+  
 }
 .sociais .social a
 {
-    color: #000;
+    color: #aaa;
     font-size: 1.5em;
-    transition: color .3s linear;
+    transition: color .3s linear;   
 }
-.sociais .social:hover
+/* .sociais .social:hover
 {
     background: #444;
-}
+} */
 
 .sociais .social:hover a 
 {
@@ -102,6 +109,7 @@ footer .boxs:nth-child(4)
     footer
     {
         flex-direction: column;
+        height: 100%;
     }
     footer .boxs
     {

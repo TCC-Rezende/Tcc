@@ -4,16 +4,13 @@ body{
 }
 
  .container{
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
-    font-size: 1.5rem; 
+    /* font-size: 1.5rem;  */
+}
+p{
+    text-align: justify;
+    padding: 10px;
 }
 
-.oi {
-    font-style: italic;
-}
-.header a img
-{
-    height: 100px;
-}
 
