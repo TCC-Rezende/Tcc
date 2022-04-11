@@ -50,7 +50,7 @@
             <div class="form cadasForm">
                 <form>
                     <h3>Cadastro Usuário</h3>
-                    <input type="text" placeholder="Usuario">
+                    <input type="text" placeholder="Nome Usuario">
                     <input type="email" placeholder="Email">
                     <input type="text" placeholder="CPF">
                     <input type="password" placeholder="Senha">

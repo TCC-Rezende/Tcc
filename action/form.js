@@ -12,3 +12,4 @@ logarBtn.onclick = function(){
     formBx.classList.remove('ativo')
     body.classList.remove('ativo')
 }
+

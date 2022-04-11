@@ -2,7 +2,8 @@ footer
 {
     width: 100%;
     height: 250px;
-    background: #444;
+    /* background: #444; */
+    background: rgba(255, 255, 255, 0.2) ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +12,7 @@ footer .boxs
 {
     width: 320px;
     min-height: 150px;
-    padding: 20px;
+    padding: 10px;
 }
 footer .boxs:nth-child(4)
 {
@@ -41,6 +42,7 @@ footer .boxs:nth-child(4)
 {
     color: #fff;
     text-align: justify;
+    font-size: clamp(1em+ 1vw);
 }
 
 .rodape
@@ -50,7 +52,8 @@ footer .boxs:nth-child(4)
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: rgb(7, 122, 138);
+
     padding: 0 20px;
 
 }
@@ -104,7 +107,7 @@ footer .boxs:nth-child(4)
 
 
 
-@media(max-width: 950px)
+@media(max-width: 1300px)
 {
     footer
     {
