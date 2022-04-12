@@ -7,7 +7,7 @@
 body
 {
    
-    background: var(--cor-dinamica-padrao);
+    /* background: var(--cor-dinamica-padrao); */
     transition: 0.5s ease-in-out;
 }
 body.ativo
@@ -144,7 +144,7 @@ body.ativo
 }
 .formBx .form form input[type="submit"]
 {
-    background: var(--cor-dinamica-padrao); /*Fundo do Login */
+/*  background: var(--cor-dinamica-padrao); Fundo do Login */
     border: none;
     color: #fff;
     max-width: 100px;

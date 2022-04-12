@@ -16,13 +16,18 @@ footer .boxs
 }
 footer .boxs:nth-child(4)
 {
-    width: 400px;
+    width: 500px;
+    /* font-size: clamp(1em+ 1vw); */
+    height: calc(100% - 50px); 
+    overflow: hidden;
+
+
 }
 
 .boxs h2
 {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .boxs ul li
@@ -37,14 +42,30 @@ footer .boxs:nth-child(4)
 {
     color: #fff;
 }
-
-.boxs p
+.boxs .text
+{
+    overflow: hidden;
+}
+.boxs p:hover
 {
     color: #fff;
     text-align: justify;
-    font-size: clamp(1em+ 1vw);
+    padding: 10px;
+    animation: texto-mov 4s linear infinite;
 }
+ @keyframes texto-mov
+{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(-50px);
 
+    }
+    100%{
+        transform: translateY(-70px);
+    }
+}
 .rodape
 {
     width: 100%;
@@ -52,8 +73,8 @@ footer .boxs:nth-child(4)
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(7, 122, 138);
-
+    background:  rgba(255, 255, 255, 0.2) ;
+    border-top: solid 2px aliceblue ;
     padding: 0 20px;
 
 }
@@ -123,4 +144,9 @@ footer .boxs:nth-child(4)
     {
         width: 100%;
     }
+    .boxs p:hover
+    {
+        animation: 0s;
+    }
+
 }
