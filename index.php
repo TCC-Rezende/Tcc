@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; ../index.php  ">
 
     
      <title>Título</title>
@@ -18,6 +17,7 @@
     include_once "estilos/padrao.css";
     include_once "estilos/cabecalho.css";
     include_once "estilos/rodape.css";
+    
     // estilos da página
     include_once "estilos/styleInicio.css";
     ?>
@@ -42,6 +42,8 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati maxime numqu
 
 
 <!-- Links para os icones & logos usados -->
+
+<script src="action/cabecalho.js"></script> 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

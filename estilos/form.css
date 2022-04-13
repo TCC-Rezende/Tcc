@@ -10,10 +10,10 @@ body
     /* background: var(--cor-dinamica-padrao); */
     transition: 0.5s ease-in-out;
 }
-body.ativo
+/* body.ativo
 {
-    background: var(--cor-ativa);
-}
+     var(--cor-ativa) 
+} */
 .body
 {
     display: flex;
@@ -39,8 +39,9 @@ body.ativo
     top: 40px;
     background: rgba(255, 255, 255, 0.2) ;
     box-shadow: 0 5px 45px rgba(0,0,0,0.15);
-}
+    border-radius: 10px;
 
+}
 .blueBg .box
 {
     position: relative;
@@ -62,12 +63,16 @@ body.ativo
 {
     cursor: pointer;
     padding: 10px 20px;
-    background: #fff;
-    color: #333;
+    background: #021526;
+    color: #fff;
     font-size: 16px;
     font-weight: 500;
     border: none;
+    border-radius: 10px;
 }
+
+
+
 .formBx
 {
     position: absolute;
@@ -83,6 +88,7 @@ body.ativo
     box-shadow: 0 5px 45px rgba(0,0,0,0.25);
     transition: 0.5s ease-in-out; 
     overflow: hidden;
+    border-radius: 10px;
 }
 .formBx.ativo
 {
@@ -95,7 +101,7 @@ body.ativo
     left: 0;
     width: 100%;
     padding: 50px;
-    transition: 0.5s;
+    transition: 0.9s;
 }
 .formBx .logarForm
 {
@@ -144,21 +150,23 @@ body.ativo
 }
 .formBx .form form input[type="submit"]
 {
-/*  background: var(--cor-dinamica-padrao); Fundo do Login */
+    background: var(--cor-dinamica-padrao); /*Fundo do Login*/ 
     border: none;
     color: #fff;
     max-width: 100px;
     cursor: pointer;
+    border-radius: 7px;
+    
 }
 .formBx .form form .escSenha
 {
     color: #333;
 }
-
+/* 
 .formBx.ativo .cadasForm input[type="submit"]
 {
-    background: var(--cor-ativa); /*Fundo do Cadastro */
-}
+    background: var(--cor-ativa); Fundo do Cadastro 
+} */
 
 @media (max-width: 991px)
 {
