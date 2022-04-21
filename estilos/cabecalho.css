@@ -1,9 +1,4 @@
 
-:root
-{
-    --preto : #000;
-    --branco : #fff ;
-}
 
 ul, li, a
 {
@@ -45,3 +40,97 @@ ul, li, a
     color: var(--branco);
     
   }
+  .menu .toggle
+  {
+    display: none;
+  }
+
+  /*---------------- Barra de pesquisa ------------------*/
+
+  .menu li form
+  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu li form .contai
+  {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .menu li form .contai .iconBuscar
+  {
+    position: absolute;    
+    left: 10px;
+    z-index: 10;
+    color: #aaa;
+  }
+
+  .menu li form .pesq
+  {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-style: italic;
+    outline: none;
+    text-indent: 35px;
+    text-align: left;
+  }
+
+  
+.menu li form .pesq.clicou,
+.menu li form .pesq:focus
+{
+  font-style: normal;
+}
+
+.menu li form input[type = 'search']::-webkit-search-cancel-button{
+	
+  position: relative;
+  background-image: url("/tcc/imagens/botão-close.svg");
+	-webkit-appearance: none;	
+	height: 15px;
+	width: 15px;
+  right: 10px;
+} 
+
+ /*---------------- ** Barra de pesquisa ** ------------------*/
+
+
+@media (max-width: 991px) 
+{
+  .menu li a
+  {
+    display: none;
+  }
+  .menu .toggle
+  {
+    display: block;
+  }
+  .menu .toggle button
+  {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+  }
+  .menu .toggle button .iconTG
+  {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ff0;
+    stroke-width: 20px;
+    
+  }
+  .menu .toggle button.ativo .iconTG
+  {
+    color: #f00;
+  }
+
+}

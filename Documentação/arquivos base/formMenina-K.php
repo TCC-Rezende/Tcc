@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Formulário Responsivo</title>
-
-    <!-- Estilos necessários               ps: sempre carrafgar nessa ordem-->
-   
-    <link rel="stylesheet" type="text/css" href=" /tcc/estilos/padrao.css">
-    <link rel="stylesheet" type="text/css" href=" /tcc/estilos/cabecalho.css"> 
-    <link rel="stylesheet" type="text/css" href=" /tcc/estilos/rodape.css">   
-    
-    <!-- //Estilos necessários  -->
-
-
-    <link rel="stylesheet" type="text/css" href=" /tcc/estilos/form.css">
-   
-
+    <style>
+        <?php
+     // estilos necessários
+    include_once "../estilos/padrao.css";
+    include_once "../estilos/cabecalho.css";
+    include_once "../estilos/rodape.css";
+    // estilos da página
+    include_once "../estilos/form.css";
+        
+        
+        ?>
+    </style>
 </head>
 <body>
-  <?php include_once "../elementos/cabecalho.html";   ?>
-
+    <?php  include_once "../elementosPag/cabecalho.html";   ?>
 <div class="body">
-    <div class="container">
+<div class="container">
+
+
+    
         <div class="blueBg">
             <div class="box  logar">
                 <h2>Já tem uma conta?</h2>
@@ -44,24 +46,17 @@
                     <a href="#" class="escSenha">Esqueceu a senha?</a>
                 </form>
             </div>
+
             <div class="form cadasForm">
                 <form>
                     <h3>Cadastro Usuário</h3>
                     <input name="NomeUsu" type="text" placeholder="Nome">
-                        
-						<div class="formLinha">                    
-                            <input name="CPF" type="text" placeholder="CPF">
-								<div class="formGenero">
-
-									<p>Sexo:
-									<select name="listasexo">
-										<option value="0">Feminino</option>
-										<option value="1">Masculino</option>
-									</select>
-							
-								</div>
-						</div>
-				
+                    <input name="CPF" type="text" placeholder="CPF">
+					<p>Sexo:
+			        <select name="listasexo">
+			           	<option value="0">Feminino</option>
+				        <option value="1">Masculino</option>
+			        </select>
 					<input name="Email" type="email" placeholder="Email"> 
 					<input name="Login" type="text" placeholder="Login">
                     <input name="Senha" type="password" placeholder="Senha">
@@ -71,10 +66,12 @@
             </div>
         </div>
     </div>
-</div>
+ </div>
 
-     <?php include_once "../elementos/rodape.html" ;    ?> 
 
+    <?php include_once "../elementosPag/rodape.html";      ?>
+
+    <script src="../action/form.js"></script>
 
 <!-- Links para os icones & logos usados -->
 
@@ -82,21 +79,12 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <!-- ********************************* -->
-<!-- Scripts necesários -->
-
-<script src="../action/cabecalho.js"></script>
-<script src=" ../action/form.js"></script>
-
-
-<!-- ***************************** -->
 </body>
 </html>
 
 <?php
-/*
 
-
-    if(isset($_GET["Registrar"])) {
+	if(isset($_GET["Registrar"])) {
 			include "cadastro.php"; // Chama o PHP de Conexão
 			
 			//////////////////////$codigo=$_GET["codigo"];		
@@ -108,10 +96,10 @@
 			$Sexo=$_GET["listasexo"];
 			$erro="";
 
-		//	if ($codigo == "") 
-		//	{ 
-		//		$erro .= "Digite o código do produto<br/>";
-		//	}
+			/*if ($codigo == "") 
+			{ 
+				$erro .= "Digite o código do produto<br/>";
+			}*/
 			
 			if ($nomeUsu == "") 
 			{ 
@@ -206,5 +194,4 @@
 		 }
 	} 
 
-*/
 ?>

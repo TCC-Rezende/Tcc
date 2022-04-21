@@ -1,19 +1,9 @@
-:root
-{
-    --cor-dinamica-padrao:#021526;
-    --cor-ativa:#B4BEC9;
-}
 
 body
 {
-   
-    /* background: var(--cor-dinamica-padrao); */
     transition: 0.5s ease-in-out;
+    color: #aaa;
 }
-/* body.ativo
-{
-     var(--cor-ativa) 
-} */
 .body
 {
     display: flex;
@@ -27,6 +17,8 @@ body
     width: 800px;
     height: 500px;
     margin: 20px;
+    display: flex;
+    align-items: center;
 }
 .blueBg
 {
@@ -93,6 +85,8 @@ body
 .formBx.ativo
 {
     left: 50%;
+    top: -50px;
+    height: calc(100% + 100px);
 }
 
 .formBx .form
@@ -116,13 +110,32 @@ body
 {
     left: 100%;
     transition-delay: 0s;
-
+}
+.formBx .cadasForm .formLinha
+{
+    display: flex;
+    position: relative;
+    width: 100%;
+    
+}
+.formBx .cadasForm .formLinha .formGenero
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 20px;
 }
 .formBx.ativo .cadasForm
 {
     left: 0;
     transition-delay: 0.25s;
-
+}
+.formBx.ativo .form
+{  
+    height: 100%; 
 }
 
 .formBx .form form
@@ -136,7 +149,7 @@ body
 {
     font-size: 1.5em;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 .formBx .form form input
@@ -150,7 +163,7 @@ body
 }
 .formBx .form form input[type="submit"]
 {
-    background: var(--cor-dinamica-padrao); /*Fundo do Login*/ 
+    background: #021526; /*Fundo do Login*/ 
     border: none;
     color: #fff;
     max-width: 100px;
@@ -162,11 +175,10 @@ body
 {
     color: #333;
 }
-/* 
-.formBx.ativo .cadasForm input[type="submit"]
-{
-    background: var(--cor-ativa); Fundo do Cadastro 
-} */
+ 
+
+/*---------------- Responsivo  ------------------*/
+
 
 @media (max-width: 991px)
 {
@@ -191,6 +203,17 @@ body
         height: 500px;
         top: 0;
         box-shadow: none;
+        align-content: center;
+    }
+    .formBx .form
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .formBx .cadasForm
+    {
+        display: flex;
+        align-items: center;
     }
     .blueBg .box
     {
@@ -207,7 +230,12 @@ body
     {
         left: 0;
         top: 200px;
+        height: calc(100% - 100px);
     }
+    .formBx.ativo .form form input[type="submit"]
+    {
+        margin-bottom: 0;
+    }   
 
 }
 
