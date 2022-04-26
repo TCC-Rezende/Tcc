@@ -46,7 +46,10 @@ ul, li, a
   }
 
   /*---------------- Barra de pesquisa ------------------*/
-
+  .header
+  {
+    z-index: 1000 ;
+  }
   .menu li form
   {
     position: relative;
@@ -99,19 +102,21 @@ ul, li, a
 } 
 
  /*---------------- ** Barra de pesquisa ** ------------------*/
+ 
+ /*---------------- Responsivo ------------------*/
 
 
 @media (max-width: 991px) 
 {
-  .menu li a
+  .menu.nav-container li.nav a
   {
     display: none;
   }
-  .menu .toggle
+  .menu.nav-container .toggle
   {
     display: block;
   }
-  .menu .toggle button
+  .menu.nav-container .toggle button
   {
     position: relative;
     width: 40px;
@@ -119,7 +124,7 @@ ul, li, a
     background: transparent;
     border: none;
   }
-  .menu .toggle button .iconTG
+  .menu.nav-container .toggle button .iconTG
   {
     display: block;
     width: 100%;
@@ -128,9 +133,47 @@ ul, li, a
     stroke-width: 20px;
     
   }
-  .menu .toggle button.ativo .iconTG
+  .menu.nav-container .toggle button.ativo .iconTG
   {
     color: #f00;
   }
+ 
+  /*---------------- Responsivo  Clicado------------------*/
 
+  .menu.nav-container.ativo
+  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu.nav-container.ativo li.nav a
+  {
+    display: block;
+    color: #111;
+  }
+
+  body.ativo
+  {
+    /* position: relative; */
+    overflow: hidden;
+    /* filter: blur(5px); */
+    /* z-index: 0; */
+  }
+  .menu .toggle button.ativo
+  {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }
+
+/*---------------- Responsivo ------------------*/

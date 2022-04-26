@@ -1,4 +1,4 @@
-    <header class="header">
+    <header class="header" id="topo">
 
         <a href=" /tcc/index.php">
 			
@@ -67,16 +67,18 @@
 		  </nav>
         
         <nav>
-          <ul class="menu ">
-            <li><a href="#">Coleção</a></li>
-            <li><a href="#">Carrinho</a></li>
-            <li><a href="/tcc/paginas/form.php">Conta</a></li> 
+          <ul class="menu nav-container">
+            <li class="nav"><a href="#">Coleção</a></li>
+            <li class="nav"><a href="#">Carrinho</a></li>
+            <li class="nav"><a href="/tcc/paginas/form.php">Conta</a></li> 
             <li class="toggle">
-				<button onclick="menuToggle()">
-					<!-- <ion-icon name="apps-outline" class="abrirTG"></ion-icon>
-					<ion-icon name="close-circle-outline" class="fecharTG"></ion-icon> -->
-					<ion-icon name="tablet-portrait"  class="iconTG"></ion-icon>
-				</button>
+				<a href="#topo">
+					<button onclick="menuToggle()">
+						<!-- <ion-icon name="apps-outline" class="abrirTG"></ion-icon>
+						<ion-icon name="close-circle-outline" class="fecharTG"></ion-icon> -->
+						<ion-icon name="tablet-portrait"  class="iconTG"></ion-icon>
+					</button>
+				</a>
 			</li> 
           </ul>
         </nav>
