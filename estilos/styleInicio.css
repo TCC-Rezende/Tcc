@@ -5,13 +5,15 @@ body{
 }
 
  .container{
-    padding-top: 10px;
+
     text-align: center;
     /* font-size: 1.5rem;  */
 }
-p{
-    text-align: justify;
-    padding: 10px;
+.titulo
+{
+    font-weight: bolder;
+    font-style: italic;
 }
+
 
 

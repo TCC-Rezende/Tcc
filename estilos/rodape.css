@@ -65,7 +65,7 @@ footer .boxs:nth-child(4)
 /********** Animação do texto **************/
 .boxs p:hover
 {
-    animation: texto-mov 7s ease-in-out  infinite;
+    animation: texto-mov 5s linear  infinite;
 }
 
 .rodape
@@ -145,7 +145,25 @@ footer .boxs:nth-child(4)
 }
 .sociais .social:hover a .insta
 {
-    background: linear-gradient(90deg, rgba(130,0,143,1) 0%, rgba(234,12,95,1) 24%, rgba(255,83,65,1) 65%, rgba(246,186,0,1) 100%);
+    /* background: linear-gradient(90deg, rgba(130,0,143,1) 0%, rgba(234,12,95,1) 24%, rgba(255,83,65,1) 65%, rgba(246,186,0,1) 100%); */
+   
+   
+    /* background: -webkit-linear-gradient(90deg, rgba(130,0,143,1) 0%, rgba(234,12,95,1) 24%, rgba(255,83,65,1) 65%, rgba(246,186,0,1) 100%);
+    background: linear-gradient(90deg,  0%, rgba(234,12,95,1) 24%, rgba(255,83,65,1) 65%, rgba(246,186,0,1) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    background: #fff;
+    fill: url(#cor-insta) #fff ; 
+}
+
+#cor-insta
+{
+    --color1: rgba(130,0,143,1) ;
+    --color2: rgba(234,12,95,1);
+    --color3:  rgba(255,83,65,1) ;
+    --color4:  rgba(246,186,0,1);
 }
 
 
@@ -180,11 +198,16 @@ footer .boxs:nth-child(4)
 @keyframes texto-mov
 {
     0%{
-        transform: translateY(-10px);
+        transform: translateY(0px);
+    }
+    25%{
+        transition: translateY(-20px);
     }
     50%{
         transform: translateY(-40px);
-
+    }
+    75%{
+        transform: translateY(-60px);
     }
     100%{
         transform: translateY(-80px);

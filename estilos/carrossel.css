@@ -1,18 +1,22 @@
 .carrossel{
+    position: relative;
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
-    height: 100%;
+    height: 500px;
     width: 100%;
 
 
 }
-.container_car{
+.container-car{
     display: flex;
-    transition: transform 0,5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     transition: translateX(0);
 }
+
 img{
-    object-fit: cover;
-    height: 100%;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    right: -100%;
+
 }
