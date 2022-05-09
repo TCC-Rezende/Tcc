@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="256" y1="32" x2="256" y2="480" id="gradient-0" gradientTransform="matrix(-0.73014, 0.683299, -0.863579, -0.92278, 672.352249, 316.730411)">
+      <stop offset="0" style="stop-color: rgb(246, 186, 0);"/>
+      <stop offset="0.333" style="stop-color: rgb(255, 83, 65);"/>
+      <stop offset="0.66" style="stop-color: rgb(234, 12, 95);"/>
+      <stop offset="1" style="stop-color: rgb(130, 0, 143);"/>
+    </linearGradient>
+    <linearGradient id="gradient-2-0" gradientUnits="userSpaceOnUse" x1="274.665" y1="106.67" x2="274.665" y2="368" gradientTransform="matrix(-0.699849, 0.71429, -1.663563, -1.629929, 836.917822, 439.515055)" xlink:href="#gradient-2"/>
+    <linearGradient id="gradient-2" bx:pinned="true">
+      <stop style="stop-color: rgb(246, 186, 0);" offset="0"/>
+      <stop style="stop-color: rgb(255, 83, 65);" offset="0.333"/>
+      <stop style="stop-color: rgb(234, 12, 95);" offset="0.66"/>
+      <stop style="stop-color: rgb(130, 0, 143);" offset="1"/>
+    </linearGradient>
+  </defs>
+  <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z" style="paint-order: fill; fill: url(#gradient-0);"/>
+  <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z" style="fill: url(#gradient-2-0);"/>
+</svg>
