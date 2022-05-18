@@ -1,0 +1,16 @@
+
+body{
+    min-height: 100vh;
+}
+
+ .container{
+    padding-top: 10px;
+    text-align: center;
+    /* font-size: 1.5rem;  */
+}
+p{
+    text-align: justify;
+    padding: 10px;
+}
+
+

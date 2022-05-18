@@ -1,0 +1,205 @@
+:root
+{
+    --cor-dinamica-padrao:#021526;
+    --cor-ativa:#B4BEC9;
+}
+
+body
+{
+   
+    background: var(--cor-dinamica-padrao);
+    transition: 0.5s ease-in-out;
+}
+body.ativo
+{
+    background: var(--cor-ativa);
+}
+.body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container
+{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+.blueBg
+{
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40px;
+    background: rgba(255, 255, 255, 0.2) ;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+}
+
+.blueBg .box
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.blueBg .box h2
+{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.blueBg .box button
+{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+.formBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out; 
+    overflow: hidden;
+}
+.formBx.ativo
+{
+    left: 50%;
+}
+
+.formBx .form
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+.formBx .logarForm
+{
+    transition-delay: 0.25s;
+}
+.formBx.ativo .logarForm
+{
+    left: -100%;
+    transition-delay: 0s;
+}
+.formBx .cadasForm
+{
+    left: 100%;
+    transition-delay: 0s;
+
+}
+.formBx.ativo .cadasForm
+{
+    left: 0;
+    transition-delay: 0.25s;
+
+}
+
+.formBx .form form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formBx .form form h3
+{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.formBx .form form input
+{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+.formBx .form form input[type="submit"]
+{
+    background: var(--cor-dinamica-padrao); /*Fundo do Login */
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+.formBx .form form .escSenha
+{
+    color: #333;
+}
+
+.formBx.ativo .cadasForm input[type="submit"]
+{
+    background: var(--cor-ativa); /*Fundo do Cadastro */
+}
+
+@media (max-width: 991px)
+{
+    .container
+    { 
+        position: relative;
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .blueBg
+    {
+        top: 0;
+        height: 100%;
+
+    }
+    .formBx
+    {
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .blueBg .box
+    {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .box.logar
+    {
+        top: 0;
+    }
+    .formBx.ativo
+    {
+        left: 0;
+        top: 200px;
+    }
+
+}
+
