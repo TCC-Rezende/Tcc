@@ -1,19 +1,16 @@
-var count = 1
+function slide(){
 
-document.getElementById("radio1").checked=true
-
-
-
-setInterval(function(){
-    nextImage()
-}, 10000)
-
-function nextImage(){
-    count++;
-    if(count>3){
-        count=1
+    let count = 1
+    document.getElementById("radio1").checked=true
+    setInterval(function(){
+        nextImage()
+    }, 10000)
+    function nextImage(){
+        count += 1 
+        if(count>3){
+            count=1
+        }
+        document.getElementById("radio"+count).checked=true
     }
-
-    document.getElementById("radio"+count).checked=true
-
 }
+slide()

@@ -1,0 +1,295 @@
+@font-face {
+    font-family: Aguero;
+    src: url(font/Aguero\ Serif.ttf);
+}
+
+/*  /////////////////////////////////////////   */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*  /////////////////////////////////////////   */
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+/*  NAVBAR  */
+
+nav{
+    width: 380px;
+    background-color: #ffffff;
+    height: 120vh;
+}
+.navLogo{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+.navLogo a{
+    display: flex;
+}
+/* .navLogo {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: rgb(120, 120, 120);
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.navLogo a{
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+    font-family: Aguero;
+    cursor: default;
+} */
+
+.navOptions {
+    padding: 20px 0 0 5%; /*CIMA, DIREITA, BAIXO, ESQUERDA*/
+}
+
+.navOptions ul li {
+    position: relative;
+    right: .5em;
+    margin-top: 5%;
+    list-style: none;
+}
+
+.navOptions ul li a {
+    position: relative;
+    left: .2em;
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Lato;
+}
+
+.nav-link{
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color:rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #d3d3d3;
+}
+/* .bt_listar{
+    position: absolute;
+    margin-left: -9.2em;
+    width: 130px;
+    opacity: 0;
+} */
+
+.bt_listar:hover{
+    cursor: pointer;
+}
+/*  FINAL NAVBAR  */
+
+.dashboardInfo{
+    background-color: #000;
+    background-size: cover;
+    max-width: 80vw;
+    width: 80%;
+    position: relative;
+}
+
+.dashboardPhrase{
+    padding: 2% 0 0 5%; /*CIMA, DIREITA, BAIXO, ESQUERDA*/
+}
+
+.dashboardPhrase h2{
+    position: relative;
+    color: #f1f2f6;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Lato;
+    cursor: default;
+}
+
+.table_dados{
+    padding: 2% 0 0 5%; /*CIMA, DIREITA, BAIXO, ESQUERDA*/
+}
+
+.table_dados{
+    position: absolute;
+    left: 5%;
+    width: 63em;
+    height: auto;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+	background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 3px #000;
+    border-radius: 5px;
+    padding-right: 5em;
+}
+
+.table_dados td{
+    position: relative;
+    color: #f1f2f6;
+    right: 4em;
+    font-size: 1.3em;
+    padding-left: 4em;
+    padding-bottom: .5em;
+    text-align: center;
+}
+
+.table_dados td{
+    margin:0;
+    border-bottom: .2em solid #000;
+}
+
+
+
+#dados1{
+    position: relative;
+    right: 4.6em;
+    text-align: center;
+    font-size: 1em;
+}
+
+#dados2{
+    position: relative;
+    right: 4.5em;
+    font-size: 1em;
+}
+
+#dados3{
+    position: relative;
+    right: 4.5em;
+    font-size: 1em;
+}
+
+#dados4{
+    position: relative;
+    right: 4.7em;
+    font-size: 1em;
+}
+
+#dados5{
+    position: relative;
+    right: 4.5em;
+    font-size: 1em;
+    text-transform: lowercase;
+}
+
+#dados7{
+    position: relative;
+    right: 4.5em;
+    font-size: 1em;
+}
+
+/*bt limpar quando produtos forem listados do banco*/
+.bt_limpar_list{
+    position: relative;
+    top: -1em;
+    left: 55%;
+    width: 10em;
+    padding: 5px;
+    background-color: rgb(156, 53, 53);
+    text-transform: uppercase;
+    border: solid 1px black;
+    border-radius: .5em;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: scale(1);
+}
+
+.bt_limpar_list:hover{
+    cursor: pointer;
+    background-color: rgb(156, 53, 53);
+    color: rgba(250, 250, 250, .9);
+    opacity: .8;
+    transform: scale(1.03);
+    transition: .4s;
+}
+
+
+/*Estilização do erro caso banco esteja vazio*/
+.text_erro{
+    position: absolute;
+    transition-delay: 2s;
+    left: 5%;
+    top: 17%;
+    margin-top:-50px;
+    width: 25em; 
+    height: 5em; 
+	background-color: rgba(0, 0, 0, 0.7);
+    border-radius: .5em;
+    z-index: 1;
+    text-align: center; 
+    font-family: Lato;
+}
+
+.text_erro h2{
+    position: relative;
+    font-size: 1.8em;
+    color: #b22222;
+}
+
+.text_erro h4{
+    position: relative;
+    top: .2em;
+    letter-spacing: .1px;
+    font-size: 1.1em;
+    color: #f1f2f6;
+}
+
+.bt_limpar_list_erro{
+    position: relative;
+    top: 2.5em;
+    right: 8em;
+    width: 10em;
+    padding: 5px;
+    background-color: rgb(155, 41, 41);
+    text-transform: uppercase;
+    border: solid 1px black;
+    border-radius: .5em;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: scale(1);
+}
+
+.bt_limpar_list_erro:hover{
+    cursor: pointer;
+    background-color: rgb(145, 45, 45);
+    color: rgba(250, 250, 250, .9);
+    opacity: .8;
+    transform: scale(1.03);
+    transition: .4s;
+}
+
+
+

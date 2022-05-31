@@ -1,0 +1,424 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+    --preto: #000;
+    --branco: #fff ;
+    --btnToggle: #FF5500;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+::-webkit-scrollbar    
+{
+   width: 9px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgb(255, 255, 255,0.7);
+    border-radius: 20px;
+} 
+::-webkit-scrollbar-corner
+{
+    background: transparent;
+}
+::-webkit-scrollbar-corner:hover
+{
+    background: rgb(0, 0, 0, 1);
+}
+body
+{
+    height: 100vh;
+    background: var(--preto);
+}
+
+
+/* Começa apartirt daqui*/
+.container{
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/*----------------Barra lateral-------------------*/
+.nav-sidebar  /* SECTION */
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-lateral  /*----Div Geral-----*/
+{
+    position: relative;
+    height: 100%;
+    background: var(--branco);
+    width: 100%;
+    transition: .5s linear;
+    display: grid;
+    grid-template-areas: /* Cada #string# que foi escrito representa uma linha(row) e se der espaço e escrever mais itens na frente do mesmo "link" é como se adiciona-se colunas ao lado   */
+    "logo"
+    "conteudo"
+    "backBtn" ;
+    animation: smoothClickAF 1s linear;
+
+    
+}
+/*-----------------------LOGO-----------------------*/
+.nav-lateral .logo-navBar
+{
+    position: relative;
+    grid-area: logo;
+    height: 100%;
+    
+}
+.nav-lateral .logo-navBar a 
+{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+
+.nav-lateral .logo-navBar .logo-navBar-bola
+{
+    display: block;
+    height: 50px;          
+    width: 50px;          
+}
+.nav-lateral .logo-navBar .logo-navBar-letters
+{
+    display: block;
+    padding: 0 0 0 10px;
+    height: 30px;
+}
+/*-----------------------LOGO-----------------------*/
+/*-----------------------NAVEGACAO-----------------------*/
+.navega{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu
+{
+    grid-area: conteudo;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu .secaoSuperior
+{
+    padding-bottom:  30px;
+}
+.menu .secaoInferior
+{
+    padding-top: 30px;
+}
+ .menu .elemento-nav 
+{
+    padding: 10px 0 10px 0;
+} 
+.menu .elemento-nav .item-nav
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--preto);
+    font-weight: bold;
+}
+.menu .elemento-nav .item-nav .descr-nav
+{
+    padding-left: 5px;
+}
+.menu .elemento-nav .item-nav .img-nav
+{
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+
+/*-----------------------NAVEGACAO-----------------------*/
+/*-----------------------BOTAO TOGGLE-----------------------*/
+.nav-sidebar .btn-toogle{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    /* top: 50%; transform: translateY(-50%); */
+    right: 0; transform: translateX(50%) ;
+    background-color: var(--btnToggle) ;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+.nav-sidebar .btn-toogle img
+{
+    display: block;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-180deg);
+    transition: .5s linear;
+    cursor: pointer;
+}
+.nav-lateral .back_Btn
+{
+    grid-area: backBtn ;
+    display: flex;
+    align-items: flex-end;
+    
+
+}
+/*-----------------------BOTAO TOGGLE-----------------------*/
+/*-----------------------BOTAO BACK-----------------------*/
+.nav-lateral button
+{
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0 0 10px 0;
+}
+.nav-lateral .seta-back
+{
+    display: flex;
+    align-items: center;
+    color: var(--preto) ;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.nav-lateral .seta-back img
+{
+    display: block;
+    height: 30px ; 
+}
+.nav-lateral .seta-back span
+{
+    padding-left: 10px ;
+}
+
+/*-----------------------BOTAO BACK-----------------------*/
+.nav-lateral .logo-navBar,
+.nav-lateral .navega,
+.nav-lateral .back_Btn
+{
+    padding-left: 10px;
+}
+
+
+
+/*---------------------Nav Contraida----------------------- */
+.nav-lateral.on
+{
+    position: relative;
+    width: 100% ;
+    animation: smoothClickBE 1s linear;
+}
+.nav-lateral.on .logo-navBar.small,
+.nav-lateral.on .navega.small,
+.nav-lateral.on .back_Btn.small
+{
+    padding-right: 10px;
+}
+.nav-sidebar.on .nav-lateral.on ~ .btn-toogle img
+{
+    transform: rotate(0deg);
+}
+.nav-lateral.on .logo-navBar.small .logo-navBar-letters,
+.nav-lateral.on .navega.small .descr-nav,
+.nav-lateral.on .back_Btn.small span
+{
+    display: none;
+}
+
+.navega.small .menu
+{ 
+    justify-content: center;
+}
+
+
+/*------------------Barra lateral-----------------------*/
+/* Ideia de animação para a sidebar:
+    animação que muda o tamanho da barra pra fazer um clique suave
+
+*/
+@keyframes smoothClickAF{
+    0%
+    {
+        /* transform: translateX(0); */
+        width: 80px;   
+    }
+    15%
+    {
+        width: 140px;
+    }
+    25%
+    {
+        width: 200px;   
+    }
+    50%
+    {
+        width: 250px;
+    }
+    75%
+    {
+        width: 305px;
+    }
+    100%
+    {
+        width: 100%;
+    }
+}
+
+
+@keyframes smoothClickBE{
+    0%
+    {
+        width: 250px;   
+    }
+    50%
+    {
+        width: 90px;   
+    }
+    75%
+    {
+        width: 70px;
+    }
+    100%
+    {
+        width: 99%;   
+    }
+}
+
+/*---------------------------------------BODY-------------------------------------*/
+
+
+.container-body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco); 
+    width: 100%;
+
+}
+/*---------------------------------------Pagina do Usuario-------------------------------------*/
+
+.container-body .container-infoUsu
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.container-body .nomeUsu 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0 0 0;
+}
+.container-body .nomeUsu img
+{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px 0 0;
+
+}
+.container-body .container-main
+{
+    position: relative;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-body .container-main .container-conteudo 
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.container-body .container-main .container-conteudo .alignContent
+{
+    display: grid;
+    grid-template-areas: "cel1 cel2 cel3" "cel4 cel5 cel6";
+    grid-gap: 100px 80px;
+}
+
+.container-body .container-main .container-conteudo .label
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+/*---------------------------------------*Pagina do Usuario*-------------------------------------*/
+
+
+/*---------------------------------------Histórico de Compras-------------------------------------*/
+.container-body .container-hist-comp
+{
+    position: relative;
+    right: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+/*---------------------------------------*Histórico de Compras*-------------------------------------*/
+
+
+/*---------------------------------------Carrinho-------------------------------------*/
+.container-body .container-info-car
+{
+    position: relative;
+    right: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------------------*Carrinho*-------------------------------------*/
+
+
+/*---------------------------------------Favoritos-------------------------------------*/
+.container-body .container-prod-favo
+{
+    position: relative;
+    right: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+/*---------------------------------------*Favoritos*-------------------------------------*/

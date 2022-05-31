@@ -15,7 +15,7 @@ function pesqAtiva(){
 
 
 function  menuToggle(){
-    let menuTG = document.querySelector(".menu .toggle button")
+    let menuTG = document.querySelector(".menu.responivo .toggle button")
     let container = document.querySelector(".menu.nav-container")
     let body = document.querySelector("body")
     let valida = menuTG.classList.value
@@ -30,5 +30,20 @@ function  menuToggle(){
         container.classList.add("ativo")
         body.classList.add("ativo")
     }
-
 }
+
+
+window.addEventListener("scroll", function(){
+
+    let cabecalho = document.querySelector("header")
+    let tela = this.scrollY
+    console.log(tela)
+
+    if(this.scrollY > 0){
+        cabecalho.style.position = "fixed"
+        cabecalho.classList.add("fixa", window.scrollY > 0)
+    }else{
+        cabecalho.style.position = "relative"
+        cabecalho.classList.remove("fixa")
+    }
+})
